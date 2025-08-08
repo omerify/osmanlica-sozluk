@@ -1,0 +1,124 @@
+:root {
+    --primary-color: #4A2F22;
+    --background-color: #FFFEDF;
+    --header-color: #8D6E63;
+    --border-color: #D7CCC8;
+    --hover-color: #A1887F;
+    --card-background: #FFFFFF;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: var(--header-color);
+    font-weight: 700;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: var(--header-color);
+    box-shadow: 0 0 5px rgba(74, 47, 34, 0.2);
+}
+
+.alphabet-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.alphabet-filter button {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.alphabet-filter button:hover, .alphabet-filter button.active {
+    background-color: var(--hover-color);
+    color: white;
+    border-color: var(--hover-color);
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.result-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item h3 {
+    margin: 0 0 5px 0;
+    color: var(--header-color);
+    font-size: 1.4em;
+}
+
+.result-item p {
+    margin: 0;
+    font-size: 1em;
+}
+
+#result-count {
+    text-align: center;
+    color: #777;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.initial-message {
+    text-align: center;
+    color: #999;
+    font-size: 1.1em;
+    margin-top: 40px;
+}
